@@ -23,17 +23,23 @@ var firstQuestion = function(){
     data: {session_key: our_session_key}
  })
  .done(function(response){
+  fillQuestion(response);
+  });
+}
+
+var fillQuestion = function(response){
   var question = response.question.question;
   var choices = response.question.choices;
   $('h2').html(question);
-  console.log(choices);
 
+  // creates choice bullet points with individual data-choice-ids
   for (var i = 1; i < choices.length; i++){
     $(".options[data-choice-id='1']").clone().attr("data-choice-id", i+1).appendTo('.possible-answers');
   }
 
-  // $('ul > li:nth-child(1)').html(response.question.choices[0].choice);
-  // debugger;
+  for (var i = 0; i <choices.length; i++){
+    var child = i + 1
+    $('ul > li:nth-child('+ child +')').html(choices[i].choice);
+  }
 
- })
-}
+ }
