@@ -5,8 +5,6 @@ $(document).ready(function(){
     type: 'get',
   })
   .done(function(response){
-    console.log("done!");
-    console.log(response);
     var quiz = response
     $('#quiz-name').html(quiz.quizzes[0].name)
     $('.question').html(firstQuestion());
@@ -14,7 +12,6 @@ $(document).ready(function(){
 });
 
 var our_session_key = Math.random()*10000000000000000000000000000;
-// console.log(our_session_key);
 
 var firstQuestion = function(){
  $.ajax({
