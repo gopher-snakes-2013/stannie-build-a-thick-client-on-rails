@@ -1,15 +1,40 @@
 .container {
   margin: 3em;
+  position: relative;
 }
 
 body {
   background-color: #d3d3d3;
+
 }
 
 .quiz-title {
-  font-size: 50px;
+  font-size: 60px;
   color: gray;
   font-family: Helvetica;
   font-weight: bold;
   text-align: center;
+}
+
+.question {
+  font-size: 45px;
+  font-family: Helvetica;
+  text-align: center;
+  color: white;
+}
+
+.choices {
+  font-size: 30px;
+  font-family: Helvetica;
+  text-align: center;
+  color: white;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #1B76B8;
+  background-color: #1B76B8;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
